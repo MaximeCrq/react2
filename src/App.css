@@ -36,3 +36,56 @@
     transform: rotate(360deg);
   }
 }
+
+html, body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.maxou{
+  width:600px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.backgroundcolorOrange{
+  background-color: rgb(95, 75, 37);
+  font-size: large;
+  width: 100%;
+  height: 100%;
+}
+
+.month{
+  background-color: orange;
+  font-size: 2rem;
+  text-align: center;
+  width: 100%;
+  height: 100px;
+}
+
+.grid-7 {
+  display: grid;
+  grid-template-columns: repeat(7,1fr);
+  width: 100%;
+  div{
+    p{
+      justify-self: center;
+      align-self: center;
+    }
+  }
+}
+
+.days2 {
+  div{
+    border: 1px solid black;
+    margin: 10px;
+  }
+  div:hover{
+    background-color: #d39127;
+  }
+}

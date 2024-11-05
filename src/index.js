@@ -1,13 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Template from './Template';
+import Exo from './Exo';
+import App5 from './App5';
+import DAY_LETTER from './App5';
+import autre from './App5';
+import Autre2 from './App5';
+import Huit from './App5';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Huit />
   </React.StrictMode>
 );
 
