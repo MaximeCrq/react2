@@ -46,10 +46,10 @@ function App11() {
         event.preventDefault();
         const INPUTS2 = document.querySelectorAll('input[type="text"]');
         const INPUTS = Array.prototype.slice.call(INPUTS2);
-        //console.log(INPUTS);
+        console.log(INPUTS);
         let tab = [];
-        INPUTS.forEach((valeur)=>tab.push[valeur.value]);
-        //console.log(tab);
+        INPUTS.forEach((valeur)=>tab.push(valeur.value));
+        console.log(tab);
         return (
             <p>
                 {tab.forEach((valeur)=><p>{tab[valeur]}</p>)}
