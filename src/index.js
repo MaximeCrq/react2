@@ -13,13 +13,15 @@ import App from './Exo9';
 import App10 from './Exo10_App';
 import App11 from './Exo11_Todo';
 import From from './Exo11_Todo';
+import App12 from './Exo12_App';
+import App13 from './Exo13_todo';
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App11 />
+    <App13 />
   </React.StrictMode>
 );
 

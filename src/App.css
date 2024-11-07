@@ -53,42 +53,11 @@ html, body {
   align-items: center;
 }
 
-.backgroundcolorOrange{
-  background-color: rgb(95, 75, 37);
-  font-size: large;
-  width: 100%;
-  height: 100%;
-}
 
-.month{
-  background-color: orange;
-  font-size: 2rem;
-  text-align: center;
-  width: 100%;
-  height: 100px;
-}
 
-.grid-7 {
-  display: grid;
-  grid-template-columns: repeat(7,1fr);
-  width: 100%;
-  div{
-    p{
-      justify-self: center;
-      align-self: center;
-    }
-  }
-}
 
-.days2 {
-  div{
-    border: 1px solid black;
-    margin: 10px;
-  }
-  div:hover{
-    background-color: #d39127;
-  }
-}
+
+
 
 .green{
   background-color: yellowgreen;
@@ -96,4 +65,53 @@ html, body {
 
 .orange{
   background-color: orange;
+}
+
+.card{
+  background-color: blanchedalmond;
+  padding:2em;
+  width: 450px;
+}
+
+.border{
+  border: 20px solid red;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.backgroundOrange:hover{
+  background-color: orange;
+}
+
+.month{
+  background-color: orange;
+  font-size: 2rem;
+}
+
+.grid-7{
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.grid-7 div{
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.days div{
+  border: solid 1px grey;
+  margin: 3px;
+}
+
+.selected {
+  background-color: orange;
+  border-radius: 50%;
 }
