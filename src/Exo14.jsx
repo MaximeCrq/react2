@@ -1,4 +1,5 @@
 import './raph.css'
+import { useState } from 'react'
 
 const USERS=[
     {
@@ -16,17 +17,36 @@ const USERS=[
       }
   ]
 
-function Raph() {
-    return <>
-    {USERS.map((utilisateur)=>
-    <article style={{ display:'flex', flexDirection:'row' }}>
-        <h2>{utilisateur.pseudo}</h2>
-        <div>
-            <p>{utilisateur.like}</p>
+function Raph({returnLike , pseudo}) {
+  const  [likes, setLikes] = useState(returnLike);
+
+  function handleClickLike(){
+    setLikes(likes + 1);
+  }
+
+  return <>
+
+    <article style={{ display:'flex', flexDirection:'column' }}>
+        <h2>{pseudo}</h2>
+        <div style={{ display:'flex', flexDirection:'row' }}>
+            <h3>{likes}</h3>
+            <button onClick={handleClickLike}>+</button>
         </div>
     </article>
-    )}
-    </>
+  </>
 }
 
-export default Raph
+function Raph2(){
+  return (
+    <>
+      <ul>
+        {USERS.map(user => 
+        <li key={user.pseudo}>
+          <Raph pseudo={user.pseudo} returnLike={user.like} />
+        </li>)}
+      </ul>
+    </>
+  )
+}
+
+export default Raph2
