@@ -1,6 +1,11 @@
 import { NavLink, Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
-import Blog from './Blog'
-import Accueil from './Accueil'
+import Blog from './Blog';
+import Accueil from './Accueil';
+import Portfolio from "./Portfolio";
+import Contact from "./Contact";
+import CardUser from "./CardUser";
+import Calendar from "./Calendar";
+import ToDoList from "./ToDoList";
 import PageError from "./PageError";
 
 const router = createBrowserRouter([
@@ -18,7 +23,34 @@ const router = createBrowserRouter([
                 path:'/blog',
                 element:<Blog/>,
                 errorElement:<PageError/>
-            }
+            },
+            {
+                path:'/Portfolio',
+                element:<Portfolio/>,
+                errorElement:<PageError/>,
+                children:[
+                    {
+                        path:'/Portfolio/CardUser',
+                        element:<CardUser/>,
+                        errorElement:<PageError/>
+                    },
+                    {
+                        path:'/Portfolio/Calendar',
+                        element:<Calendar/>,
+                        errorElement:<PageError/>
+                    },
+                    {
+                        path:'/Portfolio/ToDoList',
+                        element:<ToDoList/>,
+                        errorElement:<PageError/>
+                    }
+                ]
+            },
+            {
+                path:'/Contact',
+                element:<Contact/>,
+                errorElement:<PageError/>
+            },
         ]
         }
 ]);
@@ -30,8 +62,9 @@ function Root(){
             <h1>Mon super blog</h1>
             <nav>
                 <NavLink to={'/Accueil'}>Accueil</NavLink>
-                <br></br>
                 <NavLink to={'/blog'}>Blog</NavLink>
+                <NavLink to={'/Portfolio'}>Portfolio</NavLink>
+                <NavLink to={'/Contact'}>Contact</NavLink>
             </nav>
         </header>
 
